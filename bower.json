@@ -1,0 +1,12 @@
+{
+  "name": "xdomainrequest",
+  "version": "1.0.0",
+  "main": "xdomainrequest.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
