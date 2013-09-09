@@ -8,16 +8,14 @@ function ajaxXDomainRequest(method, address, isJSON, data, callback) {
       callback( new Error(), null );
     };
     xdr.onprogress = function(){};
-    xdr.ontimeout = function() {
-      callback( new Error('timeout'), null );
-    };
-    xdr.timeout = 60;
+    xdr.ontimeout = function() { };
+    //xdr.timeout = 60;
     xdr.open(method, address );
 
     if(data) {
-      xdr.send(isJSON ? JSON.stringify(data) : data);
+      setTimeout(function(){xdr.send(isJSON ? JSON.stringify(data) : data);}, 0);
     }
     else {
-      xdr.send();
+      setTimeout(function(){xdr.send();}, 0);
     }
 }
