@@ -1,5 +1,5 @@
 function ajaxXDomainRequest(method, address, isJSON, data, callback) {
-    xdr = new XDomainRequest();
+    var xdr = new XDomainRequest();
     xdr.onload = function() {
       callback( null,
         isJSON? JSON.parse(xdr.responseText) : xdr.responseText );
